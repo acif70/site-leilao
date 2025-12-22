@@ -9,44 +9,66 @@
 <body>
 
 <header class="topbar">
-  <div class="wrap">
+  <div class="wrap header-row">
     <div class="brand">
       <div class="logo">CO</div>
-      <div class="brand-text">
+      <div>
         <div class="brand-title">O Código da Obra</div>
         <div class="brand-subtitle">Site simples • estático • transparente</div>
       </div>
     </div>
+
+    <nav class="toplinks">
+      <a class="link" href="leiloes.html">Leilões</a>
+      <a class="link" href="galeria.html">Galeria</a>
+    </nav>
   </div>
 </header>
 
-<main class="wrap">
-  <section class="hero">
-    <h1>Página principal</h1>
-    <p class="sub">
-      Escolha para onde ir.
+<main class="wrap" style="padding:14px 0;">
+
+  <!-- AVISO / PRÓXIMO LEILÃO -->
+  <section class="card notice">
+    <div class="notice-tag">Aviso do leilão</div>
+    <h1 class="title" style="margin-top:8px;">Próximo leilão</h1>
+
+    <p class="subtitle" style="margin-bottom:10px;">
+      <!-- EDITÁVEL: troque esse texto sempre que for anunciar um novo leilão -->
+      1º Leilão da Obra X! Dia <strong>__/__/____</strong>, às <strong>__h__</strong> (horário de Brasília).
+      O leilão terá duração de <strong>24 horas</strong>. Lances após o término do horário não serão computados.
     </p>
 
-    <div class="grid2">
-      <a class="bigbtn" href="galeria.html">
-        <div class="bigbtn-title">Galeria</div>
-        <div class="bigbtn-sub">
-          Publicação de obras • compra direta • WhatsApp
-        </div>
+    <div class="notice-actions">
+      <a class="btn-primary" href="leiloes.html">Ir para o leilão</a>
+      <a class="btn-ghost" href="galeria.html">Ver galeria</a>
+    </div>
+
+    <div class="note" style="margin-top:12px;">
+      Dica: você pode editar este aviso sempre que for abrir um novo leilão.
+    </div>
+  </section>
+
+  <!-- BOTÕES PRINCIPAIS -->
+  <section class="card">
+    <h2 style="margin:0 0 10px;">Acesse</h2>
+
+    <div class="grid-live" style="grid-template-columns:1fr 1fr;">
+      <a class="card" style="text-decoration:none; color:inherit;" href="galeria.html">
+        <h3 style="margin:0 0 6px;">Galeria</h3>
+        <div class="section-sub">Obras disponíveis para compra direta</div>
       </a>
 
-      <a class="bigbtn bigbtn-primary" href="leiloes.html">
-        <div class="bigbtn-title">Leilões</div>
-        <div class="bigbtn-sub">
-          Timer • lances via formulário • planilha pública
-        </div>
+      <a class="card" style="text-decoration:none; color:inherit;" href="leiloes.html">
+        <h3 style="margin:0 0 6px;">Leilões</h3>
+        <div class="section-sub">Timer • lances via formulário • planilha pública</div>
       </a>
     </div>
   </section>
 
-  <footer class="footer">
-    O Código da Obra • GitHub Pages
+  <footer style="padding:18px 0 28px; color:var(--muted); font-size:12.5px;">
+    O Código da Obra • GitHub Pages • controle manual
   </footer>
+
 </main>
 
 </body>
