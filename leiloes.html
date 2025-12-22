@@ -22,22 +22,25 @@
     <nav class="toplinks">
       <a class="link" href="index.html">Página principal</a>
       <a class="link" href="galeria.html">Galeria</a>
+
+      <!-- BOTÃO CONTATO -->
+      <button class="btn-ghost" type="button" id="btnContato">Contato</button>
     </nav>
   </div>
 </header>
 
 <main class="wrap main-fixed">
 
-  <!-- TOPO (como seu rascunho): texto + foto -->
+  <!-- TOPO (texto + foto) -->
   <section class="top-grid">
     <div class="card card-hero">
-      <h1 class="title">OBRA_TITULO</h1>
-      <p class="subtitle">OBRA_DESCRICAO</p>
+      <h1 class="title">Leilão da Obra X</h1>
+      <p class="subtitle">Descrição da obra X (edite este texto quando quiser).</p>
 
       <div class="meta-row">
         <div class="meta">
           <div class="meta-label">Valor mínimo do lance</div>
-          <div class="meta-value">LANCE_MINIMO</div>
+          <div class="meta-value">R$ 150,00</div>
         </div>
 
         <div class="meta">
@@ -70,7 +73,7 @@
     </div>
   </section>
 
-  <!-- MEIO: Forms e Planilha lado a lado -->
+  <!-- MEIO: Forms e Planilha lado a lado (MAIORES) -->
   <section class="grid-live">
     <div class="card live-box">
       <div class="section-head">
@@ -105,7 +108,7 @@
 
 </main>
 
-<!-- RODAPÉ: Regras (como no seu desenho) -->
+<!-- RODAPÉ -->
 <footer class="footer-fixed">
   <div class="wrap footer-inner">
     <div class="footer-block">
@@ -126,7 +129,49 @@
   </div>
 </footer>
 
+<!-- MODAL CONTATO -->
+<div class="modal-backdrop" id="contatoModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="contatoTitulo">
+    <div class="modal-head">
+      <div>
+        <div class="modal-title" id="contatoTitulo">Contato</div>
+        <div class="modal-sub">Canais oficiais do artista</div>
+      </div>
+      <button class="modal-close" type="button" id="btnFecharContato" aria-label="Fechar">✕</button>
+    </div>
+
+    <div class="modal-body">
+      <!-- EDITE AQUI OS DADOS -->
+      <div class="contact-item">
+        <div class="contact-label">WhatsApp</div>
+        <a class="contact-link" href="https://wa.me/55DDDNUMERO" target="_blank" rel="noopener">
+          +55 (DD) 9XXXX-XXXX
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-label">Instagram</div>
+        <a class="contact-link" href="https://instagram.com/SEUUSUARIO" target="_blank" rel="noopener">
+          @SEUUSUARIO
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-label">E-mail</div>
+        <a class="contact-link" href="mailto:seuemail@exemplo.com">
+          seuemail@exemplo.com
+        </a>
+      </div>
+
+      <div class="contact-note">
+        Use apenas estes canais para dúvidas, compra direta e confirmação de pagamento.
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
+  // ajuste sua data final aqui
   const END_DATE = "2025-12-23T20:00:00-03:00";
 </script>
 <script src="script.js"></script>
