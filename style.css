@@ -225,3 +225,102 @@ iframe{
   font-weight:700;
   text-decoration:none;
 }
+/* === HOME: AVISO DO LEILÃO === */
+.notice{
+  border-left:3px solid var(--accent);
+  background:
+    linear-gradient(180deg, rgba(0,170,255,.09), rgba(0,0,0,0)) ,
+    var(--panel);
+}
+
+.notice-top{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.notice-tag{
+  display:inline-block;
+  font-size:12px;
+  color:var(--muted);
+  padding:6px 10px;
+  border:1px solid rgba(0,170,255,.25);
+  border-radius:999px;
+  background: rgba(0,170,255,.06);
+}
+
+.status{
+  display:inline-block;
+  font-size:12px;
+  font-weight:800;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:#0b0d12;
+  letter-spacing:.03em;
+}
+
+/* Troque manualmente no HTML */
+.status-soon{ border-color: rgba(255,255,255,.12); color: var(--muted); }
+.status-open{ border-color: rgba(0,255,140,.35); color: #7dffb8; background: rgba(0,255,140,.06); }
+.status-closed{ border-color: rgba(255,80,80,.35); color: #ff9a9a; background: rgba(255,80,80,.06); }
+
+.notice-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+
+.btn-primary{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:12px;
+  background: var(--accent);
+  color:#001018;
+  font-weight:900;
+  text-decoration:none;
+}
+
+.btn-ghost{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:#0b0d12;
+  color:var(--text);
+  font-weight:800;
+  text-decoration:none;
+}
+
+/* === HOME: tiles === */
+.home-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.home-tile{
+  display:block;
+  padding:16px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:#0b0d12;
+  text-decoration:none;
+  color:inherit;
+}
+
+.home-tile:hover{ filter:brightness(1.06); }
+
+.tile-title{ font-weight:900; font-size:16px; margin-bottom:6px; }
+.tile-sub{ color:var(--muted); font-size:13px; }
+
+.tile-primary{
+  border-color: rgba(0,170,255,.55);
+  box-shadow: 0 0 0 1px rgba(0,170,255,.15) inset;
+}
+
+@media (max-width: 900px){
+  .home-grid{ grid-template-columns:1fr; }
+}
