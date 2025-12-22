@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>O Código da Obra — Leilão</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>O Código da Obra — Leilão</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="no-scroll">
@@ -28,30 +28,55 @@
 
 <main class="wrap main-fixed">
 
-  <!-- TOPO: OBRA + TIMER -->
-  <section class="card card-hero">
-    <h1 class="title">Leilão da Obra X</h1>
-    <p class="subtitle">
-      Obra autoral • peça única • pagamento via PIX combinado após o encerramento
-    </p>
+  <!-- TOPO (como seu rascunho): texto + foto -->
+  <section class="top-grid">
+    <div class="card card-hero">
+      <h1 class="title">OBRA_TITULO</h1>
+      <p class="subtitle">OBRA_DESCRICAO</p>
 
-    <div class="timer-box">
-      <div class="timer-label">
-        Encerramento do leilão (horário de Brasília)
+      <div class="meta-row">
+        <div class="meta">
+          <div class="meta-label">Valor mínimo do lance</div>
+          <div class="meta-value">LANCE_MINIMO</div>
+        </div>
+
+        <div class="meta">
+          <div class="meta-label">Encerramento (BRT)</div>
+          <div id="timer" class="timer-main"></div>
+        </div>
       </div>
-      <div id="timer" class="timer-main"></div>
+
+      <div class="note">
+        Lances via formulário. A lista pública não exibe dados pessoais.
+      </div>
+    </div>
+
+    <div class="card photo-card">
+      <div class="photo-label">Foto da obra</div>
+      <div class="photo-frame">
+        <img
+          src="FOTO_OBRA_URL"
+          alt="Foto da obra do leilão"
+          onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='grid';"
+        >
+        <div id="photoFallback" class="photo-fallback">
+          (adicione uma imagem da obra)
+        </div>
+      </div>
+
+      <div class="photo-caption">
+        Dica: use uma foto bem nítida e sem filtros pesados.
+      </div>
     </div>
   </section>
 
-  <!-- ÁREA PRINCIPAL SEM SCROLL -->
+  <!-- MEIO: Forms e Planilha lado a lado -->
   <section class="grid-live">
-
-    <!-- FORMULÁRIO -->
     <div class="card live-box">
-      <h2>Dar lance</h2>
-      <p class="sub">
-        Envie seu lance. Dados pessoais não aparecem publicamente.
-      </p>
+      <div class="section-head">
+        <h2>Dar lance</h2>
+        <div class="section-sub">Formulário oficial</div>
+      </div>
 
       <div class="iframe-box">
         <iframe
@@ -62,12 +87,11 @@
       </div>
     </div>
 
-    <!-- PLANILHA -->
     <div class="card live-box">
-      <h2>Lances públicos</h2>
-      <p class="sub">
-        Atualização automática em tempo real.
-      </p>
+      <div class="section-head">
+        <h2>Público</h2>
+        <div class="section-sub">Lances visíveis (sem dados sensíveis)</div>
+      </div>
 
       <div class="iframe-box">
         <iframe
@@ -77,28 +101,33 @@
         </iframe>
       </div>
     </div>
-
   </section>
 
 </main>
 
+<!-- RODAPÉ: Regras (como no seu desenho) -->
 <footer class="footer-fixed">
   <div class="wrap footer-inner">
-    <div class="footer-text">
-      <strong>Regras do leilão</strong><br>
-      O maior lance ao final do timer é o vencedor.  
-      Pagamento via PIX combinado diretamente com o artista.
+    <div class="footer-block">
+      <h3 class="footer-title">Regras do leilão</h3>
+      <ul class="rules-list">
+        <li>Os lances são enviados exclusivamente via Google Forms.</li>
+        <li>A lista pública exibe apenas data/hora, nome fictício e valor.</li>
+        <li>O maior lance ao final do timer é o vencedor.</li>
+        <li>Pagamento via PIX é combinado diretamente com o artista após o encerramento.</li>
+      </ul>
     </div>
 
     <blockquote class="quote">
       “Declaro que este lance é feito de forma consciente e responsável.
-      Caso meu lance seja o vencedor, comprometo-me a realizar o pagamento via PIX.”
+      Caso meu lance seja o vencedor, comprometo-me a realizar o pagamento via PIX dentro do prazo combinado.
+      Entendo que essas regras existem para preservar um ambiente sério, transparente e respeitoso entre artista e colecionador.”
     </blockquote>
   </div>
 </footer>
 
 <script>
-const END_DATE = "2025-12-23T20:00:00-03:00";
+  const END_DATE = "2025-12-23T20:00:00-03:00";
 </script>
 <script src="script.js"></script>
 
