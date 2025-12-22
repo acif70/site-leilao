@@ -135,3 +135,64 @@ iframe{
   .grid2{grid-template-columns:1fr}
   iframe{height:520px}
 }
+/* === LEILÕES – REFINO VISUAL === */
+
+.header-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:14px;
+}
+
+.card-hero{
+  border-left: 3px solid var(--accent);
+}
+
+.title{
+  margin:0 0 6px;
+  font-size:22px;
+  font-weight:800;
+}
+
+.subtitle{
+  margin:0 0 14px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.timer-box{
+  margin-top:12px;
+  padding:14px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:#131313;
+}
+
+.timer-label{
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:6px;
+}
+
+.timer-main{
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:.04em;
+}
+
+.rules-list{
+  margin:10px 0 0;
+  padding-left:18px;
+  color:var(--muted);
+  font-size:14px;
+}
+.rules-list li{margin:6px 0}
+
+.quote{
+  margin-top:14px;
+  padding:14px;
+  border-left:3px solid var(--accent);
+  background:#111;
+  color:#eaeaea;
+  font-size:14px;
+}
