@@ -6,7 +6,8 @@
   <title>O Código da Obra</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+
+<body class="page-home">
 
 <header class="topbar">
   <div class="wrap header-row">
@@ -14,7 +15,7 @@
       <div class="logo">CO</div>
       <div>
         <div class="brand-title">O Código da Obra</div>
-        <div class="brand-subtitle">Site simples • estático • transparente</div>
+        <div class="brand-subtitle">Leilões autorais • transparência • controle manual</div>
       </div>
     </div>
 
@@ -25,62 +26,48 @@
   </div>
 </header>
 
-<main class="wrap" style="padding:14px 0;">
-
-  <!-- AVISO / PRÓXIMO LEILÃO -->
-  <section class="card notice">
-    <div class="notice-top">
-      <!-- TROQUE A CLASSE DO STATUS: status-soon | status-open | status-closed -->
+<main class="wrap home">
+  <!-- AVISO DO LEILÃO -->
+  <section class="card home-hero">
+    <div class="hero-top">
+      <span class="pill">Aviso do leilão</span>
+      <!-- troque: status-soon | status-open | status-closed -->
       <span class="status status-soon">EM BREVE</span>
-
-      <!-- opcional: id/numeração do leilão -->
-      <span class="notice-tag">Aviso do leilão</span>
     </div>
 
-    <h1 class="title" style="margin-top:10px;">1º Leilão da Obra X</h1>
+    <h1 class="home-title">1º Leilão da Obra X</h1>
 
-    <p class="subtitle" style="margin-bottom:10px;">
+    <p class="home-text">
       Dia <strong>__/__/____</strong>, às <strong>__h__</strong> (horário de Brasília).<br>
       Duração: <strong>24 horas</strong>. Lances após o término do horário não serão computados.
     </p>
 
-    <div class="notice-actions">
+    <div class="home-actions">
       <a class="btn-primary" href="leiloes.html">Ir para o leilão</a>
-      <a class="btn-ghost" href="galeria.html">Ver galeria</a>
-
-      <!-- OPCIONAL: WhatsApp (coloque seu número no formato 55DDDNUMERO) -->
-      <!-- Ex: https://wa.me/5561999999999 -->
-      <a class="btn-ghost" href="https://wa.me/SEU_NUMERO_AQUI" target="_blank" rel="noopener">
-        Falar no WhatsApp
-      </a>
+      <a class="btn-ghost-link" href="galeria.html">Ver galeria</a>
     </div>
 
-    <div class="note" style="margin-top:12px;">
-      Você pode editar este aviso sempre que for abrir um novo leilão. (É manual e rápido.)
-    </div>
+    <p class="home-note">
+      Você edita este aviso quando quiser. O site é estático: simples, seguro e sob seu controle.
+    </p>
   </section>
 
-  <!-- ACESSOS -->
-  <section class="card">
-    <h2 style="margin:0 0 10px;">Acessos</h2>
+  <!-- BOTÕES PRINCIPAIS -->
+  <section class="home-grid">
+    <a class="tile" href="galeria.html">
+      <div class="tile-title">Galeria</div>
+      <div class="tile-sub">Obras disponíveis para compra direta</div>
+    </a>
 
-    <div class="home-grid">
-      <a class="home-tile" href="galeria.html">
-        <div class="tile-title">Galeria</div>
-        <div class="tile-sub">Obras disponíveis para compra direta</div>
-      </a>
-
-      <a class="home-tile tile-primary" href="leiloes.html">
-        <div class="tile-title">Leilões</div>
-        <div class="tile-sub">Timer • lances via formulário • planilha pública</div>
-      </a>
-    </div>
+    <a class="tile tile-accent" href="leiloes.html">
+      <div class="tile-title">Leilões</div>
+      <div class="tile-sub">Timer • Google Forms • planilha pública</div>
+    </a>
   </section>
 
-  <footer style="padding:18px 0 28px; color:var(--muted); font-size:12.5px;">
-    O Código da Obra • GitHub Pages • controle manual
+  <footer class="home-footer">
+    O Código da Obra • GitHub Pages • Sem backend • Controle manual
   </footer>
-
 </main>
 
 </body>
