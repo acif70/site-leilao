@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="no-scroll">
 
 <header class="topbar">
   <div class="wrap header-row">
@@ -26,9 +26,9 @@
   </div>
 </header>
 
-<main class="wrap">
+<main class="wrap main-fixed">
 
-  <!-- LEILÃO -->
+  <!-- TOPO: OBRA + TIMER -->
   <section class="card card-hero">
     <h1 class="title">Leilão da Obra X</h1>
     <p class="subtitle">
@@ -43,59 +43,59 @@
     </div>
   </section>
 
-  <!-- FORMULÁRIO -->
-  <section class="card">
-    <h2>Dar lance</h2>
-    <p class="sub">
-      Envie seu lance pelo formulário abaixo.  
-      Seus dados pessoais não são exibidos publicamente.
-    </p>
+  <!-- ÁREA PRINCIPAL SEM SCROLL -->
+  <section class="grid-live">
 
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSdc_scL91ev-gZQqq43TS44tnZT6vbp95iv_0m_3Kyduya1KA/viewform?embedded=true"
-      loading="lazy"
-      title="Formulário de lances">
-    </iframe>
+    <!-- FORMULÁRIO -->
+    <div class="card live-box">
+      <h2>Dar lance</h2>
+      <p class="sub">
+        Envie seu lance. Dados pessoais não aparecem publicamente.
+      </p>
+
+      <div class="iframe-box">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdc_scL91ev-gZQqq43TS44tnZT6vbp95iv_0m_3Kyduya1KA/viewform?embedded=true"
+          title="Formulário de lances"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- PLANILHA -->
+    <div class="card live-box">
+      <h2>Lances públicos</h2>
+      <p class="sub">
+        Atualização automática em tempo real.
+      </p>
+
+      <div class="iframe-box">
+        <iframe
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRhdVamZ8cKF_qvHD1AVskLTZuFIrbRzWPO3fnxzOHatntLh4tvJp3T5qWT_GwUw9BGaKjyiEpcPNd5/pubhtml?widget=true&headers=false"
+          title="Lances públicos"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
   </section>
 
-  <!-- PLANILHA -->
-  <section class="card">
-    <h2>Lances públicos</h2>
-    <p class="sub">
-      Transparência total: apenas data/hora, nome fictício e valor do lance.
-    </p>
+</main>
 
-    <iframe
-      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRhdVamZ8cKF_qvHD1AVskLTZuFIrbRzWPO3fnxzOHatntLh4tvJp3T5qWT_GwUw9BGaKjyiEpcPNd5/pubhtml?widget=true&headers=false"
-      loading="lazy"
-      title="Lances públicos">
-    </iframe>
-  </section>
-
-  <!-- REGRAS -->
-  <section class="card">
-    <h2>Regras do leilão</h2>
-
-    <ul class="rules-list">
-      <li>Os lances são enviados exclusivamente via Google Forms.</li>
-      <li>A lista pública não exibe dados pessoais.</li>
-      <li>O maior lance ao final do timer é o vencedor.</li>
-      <li>O pagamento via PIX é combinado diretamente com o artista.</li>
-    </ul>
+<footer class="footer-fixed">
+  <div class="wrap footer-inner">
+    <div class="footer-text">
+      <strong>Regras do leilão</strong><br>
+      O maior lance ao final do timer é o vencedor.  
+      Pagamento via PIX combinado diretamente com o artista.
+    </div>
 
     <blockquote class="quote">
       “Declaro que este lance é feito de forma consciente e responsável.
-      Caso meu lance seja o vencedor, comprometo-me a realizar o pagamento via PIX dentro do prazo combinado.
-      Entendo que essas regras existem para preservar um ambiente sério,
-      transparente e respeitoso entre artista e colecionador.”
+      Caso meu lance seja o vencedor, comprometo-me a realizar o pagamento via PIX.”
     </blockquote>
-  </section>
-
-  <footer class="footer">
-    O Código da Obra • Site estático • Controle manual
-  </footer>
-
-</main>
+  </div>
+</footer>
 
 <script>
 const END_DATE = "2025-12-23T20:00:00-03:00";
