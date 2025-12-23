@@ -55,13 +55,10 @@ body{
   color:rgba(255,255,255,.85);
 }
 
-.nav{display:flex; gap:10px; flex-wrap:wrap;}
+.nav{display:flex; gap:10px; flex-wrap:wrap; align-items:center;}
 
-.page{
-  padding:18px 0 26px;
-}
+.page{padding:18px 0 26px;}
 
-/* cards e botões — IGUAIS AO ANTERIOR */
 .card{
   border:1px solid var(--line);
   border-radius:var(--radius);
@@ -70,34 +67,59 @@ body{
 }
 .pad{padding:16px;}
 
+.section-title{
+  font-weight:950;
+  letter-spacing:.04em;
+  margin-bottom:10px;
+}
+
+.desc{ color:rgba(255,255,255,.78); line-height:1.55; }
+
+.hint{
+  margin-top:12px;
+  font-size:12.5px;
+  color:rgba(255,255,255,.60);
+  line-height:1.45;
+}
+
+.link{
+  font-weight:950;
+  color: rgba(255,255,255,.90);
+  text-decoration:underline;
+}
+
 .btn{
   display:inline-block;
   text-decoration:none;
   font-weight:900;
   border-radius:12px;
   padding:10px 14px;
-  cursor:pointer;
   border:1px solid transparent;
+  cursor:pointer;
   color:var(--text);
   background:none;
 }
-
 .btn-primary{
   background: linear-gradient(180deg, var(--accent2), var(--accent));
+  border-color: rgba(255,255,255,.12);
 }
-
 .btn-ghost{
   background: rgba(255,255,255,.04);
   border-color: var(--line);
 }
-
 .btn-frame{
   background: rgba(255,255,255,.05);
   border:1px solid rgba(255,255,255,.18);
   box-shadow: inset 0 0 0 2px rgba(0,0,0,.25);
 }
+.btn:hover{filter:brightness(1.06);}
 
-.btn:hover{filter:brightness(1.05)}
+.big{
+  min-width:260px;
+  text-align:center;
+  padding:18px 18px;
+  font-size:16px;
+}
 
 .footer{
   margin-top:18px;
@@ -107,9 +129,108 @@ body{
 }
 
 /* =========================
-   LEILÃO — ORGANIZAÇÃO APENAS
+   HOME
 ========================= */
+.notice{ text-align:center; padding:18px; }
+.notice-title{
+  font-weight:950;
+  letter-spacing:.12em;
+  margin-bottom:10px;
+  color: rgba(255,255,255,.92);
+}
+.notice-body p{ margin:8px 0; color:rgba(255,255,255,.82); }
 
+.hub{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:16px;
+}
+
+/* =========================
+   GALERIA
+========================= */
+.grid-2{
+  display:grid;
+  grid-template-columns: 360px 1fr;
+  gap:14px;
+  align-items:start;
+}
+
+.work-list{ margin:0; padding-left:18px; }
+.work-list li{ margin:8px 0; }
+.work-list a{
+  color: rgba(255,255,255,.88);
+  font-weight:900;
+  text-decoration:underline;
+}
+.work-list a.active{ color: #ffffff; }
+
+.gallery-view{
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap:14px;
+  align-items:start;
+}
+.gallery-photo{
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  background: rgba(0,0,0,.18);
+  min-height:280px;
+}
+.gallery-photo img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+
+.facts{
+  margin-top:12px;
+  border-top:1px solid var(--line);
+  padding-top:12px;
+  display:grid;
+  gap:8px;
+  color:rgba(255,255,255,.82);
+}
+
+/* =========================
+   CONTATO
+========================= */
+.contact-box{
+  display:grid;
+  gap:10px;
+  margin-top:10px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:12px;
+  background: rgba(255,255,255,.04);
+}
+.about{
+  display:grid;
+  grid-template-columns: 220px 1fr;
+  gap:14px;
+  align-items:start;
+}
+.about-photo{
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  background: rgba(0,0,0,.18);
+}
+.about-photo img{
+  width:100%;
+  height:100%;
+  min-height:240px;
+  object-fit:cover;
+  display:block;
+}
+
+/* =========================
+   LEILÃO
+========================= */
 .status-row.one{
   margin-bottom:10px;
 }
@@ -123,7 +244,8 @@ body{
 
 .mini{
   font-size:12px;
-  color:rgba(255,255,255,.7);
+  color:rgba(255,255,255,.70);
+  margin-bottom:6px;
 }
 
 .big{
@@ -131,17 +253,22 @@ body{
   letter-spacing:.03em;
 }
 
-/* layout geral — MESMO GRID */
+.countdown{
+  margin-top:8px;
+  font-size:12.5px;
+  color:rgba(255,255,255,.78);
+}
+.countdown strong{
+  color:#ffffff;
+}
+
 .auction-layout{
   display:grid;
   grid-template-columns: 300px 260px 1fr;
   gap:12px;
-
-  /* 👇 ÚNICA REGRA NOVA IMPORTANTE */
   max-height: calc(100vh - 260px);
 }
 
-/* colunas */
 .left{
   display:flex;
   flex-direction:column;
@@ -160,7 +287,11 @@ body{
   min-width:0;
 }
 
-/* CTA — IGUAL AO QUE FUNCIONOU */
+.min-bid .price{
+  font-weight:950;
+  font-size:22px;
+}
+
 button.btn.btn-cta{
   background-color:#b0162b;
   color:#ffd84d;
@@ -168,6 +299,7 @@ button.btn.btn-cta{
   width:100%;
   padding:18px 16px;
   border-radius:16px;
+  font-size:16px;
   font-weight:900;
   box-shadow:
     0 10px 30px rgba(0,0,0,.45),
@@ -175,14 +307,13 @@ button.btn.btn-cta{
   text-shadow:0 1px 2px rgba(0,0,0,.8);
   appearance:none;
 }
-
 button.btn.btn-cta span{
   display:block;
   margin-top:8px;
   color:#fff2a8;
   font-weight:700;
+  font-size:13px;
 }
-
 button.btn.btn-cta:hover{
   background-color:#c51b33;
   transform:translateY(-1px);
@@ -208,12 +339,13 @@ button.btn.btn-cta:hover{
   border:1px solid var(--line);
   border-radius:14px;
   overflow:auto;
+  background: rgba(0,0,0,.18);
 }
-
 .embed iframe{
   width:100%;
   height:100%;
   border:0;
+  display:block;
 }
 
 /* regras */
@@ -224,13 +356,78 @@ button.btn.btn-cta:hover{
   font-size:12.5px;
   color:rgba(255,255,255,.75);
 }
+.rules ul{ margin:8px 0 0; padding-left:18px; }
+.rules li{ margin:6px 0; }
 
 /* =========================
-   RESPONSIVO — SEM MUDANÇA
+   MODAIS (POP-UP)
 ========================= */
-@media (max-width:1020px){
-  .auction-layout{
-    grid-template-columns:1fr;
-    max-height:none;
-  }
+.modal-backdrop{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  background: rgba(0,0,0,.62);
+  z-index:50;
+}
+.modal-backdrop.show{ display:flex; }
+
+.modal{
+  width:min(720px, 100%);
+  border-radius:16px;
+  border:1px solid var(--line);
+  background: var(--panel2);
+  box-shadow: var(--shadow);
+  overflow:hidden;
+}
+.modal-wide{ width:min(980px, 100%); height:min(88vh, 860px); }
+
+.modal-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding:12px 14px;
+  border-bottom:1px solid var(--line);
+}
+.modal-title{ font-weight:950; }
+
+.modal-body{ padding:14px; }
+
+.modal-photo{
+  margin-top:12px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  background: rgba(0,0,0,.18);
+}
+.modal-photo img{
+  width:100%;
+  max-height:420px;
+  object-fit:cover;
+  display:block;
+}
+
+.modal-body-embed{
+  padding:0;
+  height:calc(100% - 54px);
+}
+.modal-body-embed iframe{
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 1020px){
+  .grid-2{ grid-template-columns: 1fr; }
+  .gallery-view{ grid-template-columns: 1fr; }
+  .auction-layout{ grid-template-columns: 1fr; max-height:none; }
+  .right .card{ height:auto; }
+  .about{ grid-template-columns: 1fr; }
 }
