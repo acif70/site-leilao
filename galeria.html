@@ -17,6 +17,7 @@
 
     <nav class="nav">
       <a class="btn btn-ghost" href="index.html">Página Inicial</a>
+      <a class="btn btn-ghost" href="leiloes.html">Leilão</a>
       <a class="btn btn-primary" href="contato.html">Fale Conosco</a>
     </nav>
   </div>
@@ -30,7 +31,7 @@
       <ul class="work-list" id="workList"></ul>
 
       <div class="hint">
-        Uma lista que quando a pessoa clica no link, a foto da obra aparece ao lado com a respectiva descrição.
+        Selecione uma obra para visualizar imagem, descrição e informações técnicas.
       </div>
     </aside>
 
@@ -38,27 +39,27 @@
     <section class="card pad">
       <div class="gallery-view">
         <div class="gallery-photo">
-          <img id="workImg" src="assets/img/obra-x.jpg" alt="A foto da obra aparece aqui!" />
+          <img id="workImg" src="assets/img/obra-x.jpg" alt="Obra selecionada" />
         </div>
 
         <div class="gallery-meta">
           <div class="section-title" id="workTitle">Obra X</div>
 
           <div class="desc" id="workDesc">
-            Descrição da obra:
+            Descrição da obra (edite no script.js).
           </div>
 
           <div class="facts">
             <div><strong>Nome:</strong> <span id="fNome">Obra X</span></div>
             <div><strong>Número:</strong> <span id="fNumero">—</span></div>
             <div><strong>Técnica:</strong> <span id="fTecnica">—</span></div>
-            <div><strong>Etc.:</strong> <span id="fEtc">—</span></div>
+            <div><strong>Detalhes:</strong> <span id="fEtc">—</span></div>
+          </div>
+
+          <div class="hint">
+            Para adicionar novas obras, edite a lista <strong>OBRAS</strong> no arquivo <strong>script.js</strong>.
           </div>
         </div>
-      </div>
-
-      <div class="hint">
-        Você edita/insere obras no <strong>script.js</strong> (lista OBRAS).
       </div>
     </section>
   </section>
