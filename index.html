@@ -6,68 +6,45 @@
   <title>O Código da Obra</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+<body>
 
-<body class="page-home">
-
-<header class="topbar">
+<header class="site-header">
   <div class="wrap header-row">
     <div class="brand">
-      <div class="logo">CO</div>
-      <div>
+      <div class="brand-icon" aria-hidden="true">⚖️</div>
+      <div class="brand-text">
         <div class="brand-title">O Código da Obra</div>
-        <div class="brand-subtitle">Leilões autorais • transparência • controle manual</div>
+        <div class="brand-subtitle">Site simples • estático • transparente</div>
       </div>
     </div>
 
-    <nav class="toplinks">
-      <a class="link" href="leiloes.html">Leilões</a>
-      <a class="link" href="galeria.html">Galeria</a>
-    </nav>
+    <div class="header-actions">
+      <a class="btn btn-primary" href="contato.html">Fale Conosco</a>
+    </div>
   </div>
 </header>
 
-<main class="wrap home">
-  <!-- AVISO DO LEILÃO -->
-  <section class="card home-hero">
-    <div class="hero-top">
-      <span class="pill">Aviso do leilão</span>
-      <!-- troque: status-soon | status-open | status-closed -->
-      <span class="status status-soon">EM BREVE</span>
-    </div>
+<main class="wrap page">
 
-    <h1 class="home-title">1º Leilão da Obra X</h1>
-
-    <p class="home-text">
-      Dia <strong>__/__/____</strong>, às <strong>__h__</strong> (horário de Brasília).<br>
-      Duração: <strong>24 horas</strong>. Lances após o término do horário não serão computados.
-    </p>
-
-    <div class="home-actions">
-      <a class="btn-primary" href="leiloes.html">Ir para o leilão</a>
-      <a class="btn-ghost-link" href="galeria.html">Ver galeria</a>
-    </div>
-
-    <p class="home-note">
-      Você edita este aviso quando quiser. O site é estático: simples, seguro e sob seu controle.
-    </p>
+  <section class="hub-buttons">
+    <a class="btn btn-frame big" href="galeria.html">Galeria de Arte</a>
+    <a class="btn btn-frame big" href="leiloes.html">Leilões</a>
   </section>
 
-  <!-- BOTÕES PRINCIPAIS -->
-  <section class="home-grid">
-    <a class="tile" href="galeria.html">
-      <div class="tile-title">Galeria</div>
-      <div class="tile-sub">Obras disponíveis para compra direta</div>
-    </a>
-
-    <a class="tile tile-accent" href="leiloes.html">
-      <div class="tile-title">Leilões</div>
-      <div class="tile-sub">Timer • Google Forms • planilha pública</div>
-    </a>
+  <section class="notice card">
+    <div class="notice-title">QUADRO DE AVISOS!</div>
+    <div class="notice-body">
+      <div class="notice-line"><strong>1º Leilão da Obra X</strong></div>
+      <div class="notice-line">Dia __/__/____, às __h__ (horário de Brasília).</div>
+      <div class="notice-line">Duração: 24 horas.</div>
+      <div class="notice-line">Lances após o término do horário não serão computados.</div>
+    </div>
   </section>
 
-  <footer class="home-footer">
-    O Código da Obra • GitHub Pages • Sem backend • Controle manual
+  <footer class="footer">
+    <div>© O Código da Obra • GitHub Pages • Sem backend • Controle manual</div>
   </footer>
+
 </main>
 
 </body>
