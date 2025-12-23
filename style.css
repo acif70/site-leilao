@@ -58,17 +58,17 @@ body{
 .nav{display:flex; gap:10px; flex-wrap:wrap;}
 
 .page{
-  padding:12px 0 16px;
+  padding:18px 0 26px;
 }
 
-/* CARD / BOTÕES */
+/* cards e botões — IGUAIS AO ANTERIOR */
 .card{
   border:1px solid var(--line);
   border-radius:var(--radius);
   background: linear-gradient(180deg, rgba(255,255,255,.05), transparent 30%), var(--panel);
   box-shadow: var(--shadow);
 }
-.pad{padding:14px;}
+.pad{padding:16px;}
 
 .btn{
   display:inline-block;
@@ -100,24 +100,24 @@ body{
 .btn:hover{filter:brightness(1.05)}
 
 .footer{
-  margin-top:12px;
+  margin-top:18px;
   color: rgba(255,255,255,.55);
-  font-size:12px;
+  font-size:12.5px;
   text-align:center;
 }
 
 /* =========================
-   LEILÃO — DIAGRAMAÇÃO
+   LEILÃO — ORGANIZAÇÃO APENAS
 ========================= */
 
 .status-row.one{
-  margin-bottom:8px;
+  margin-bottom:10px;
 }
 
 .status-box{
   border:1px solid var(--line);
   border-radius:14px;
-  padding:10px;
+  padding:12px;
   background: rgba(255,255,255,.04);
 }
 
@@ -131,67 +131,56 @@ body{
   letter-spacing:.03em;
 }
 
-/* layout geral do leilão */
+/* layout geral — MESMO GRID */
 .auction-layout{
   display:grid;
   grid-template-columns: 300px 260px 1fr;
   gap:12px;
-  max-height: calc(100vh - 210px); /* cabeçalho + footer */
-  align-items:stretch;
+
+  /* 👇 ÚNICA REGRA NOVA IMPORTANTE */
+  max-height: calc(100vh - 260px);
 }
 
 /* colunas */
-.left,
-.center,
-.right{
-  height:100%;
-}
-
 .left{
   display:flex;
   flex-direction:column;
-  gap:10px;
+  gap:12px;
 }
 
 .center{
   display:flex;
   flex-direction:column;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
   gap:12px;
 }
 
 .right{
-  display:flex;
+  min-width:0;
 }
 
-/* valor mínimo */
-.min-bid .price{
-  font-weight:950;
-  font-size:22px;
-}
-
-/* CTA — DEFINITIVO */
+/* CTA — IGUAL AO QUE FUNCIONOU */
 button.btn.btn-cta{
   background-color:#b0162b;
   color:#ffd84d;
-  border:3px solid #ffd84d;
+  border:2px solid #ffd84d;
   width:100%;
-  padding:16px;
+  padding:18px 16px;
   border-radius:16px;
   font-weight:900;
   box-shadow:
-    0 12px 30px rgba(0,0,0,.45),
+    0 10px 30px rgba(0,0,0,.45),
     inset 0 0 0 2px rgba(0,0,0,.25);
-  text-shadow:0 2px 6px rgba(0,0,0,.7);
+  text-shadow:0 1px 2px rgba(0,0,0,.8);
   appearance:none;
 }
 
 button.btn.btn-cta span{
   display:block;
   margin-top:8px;
-  font-weight:700;
   color:#fff2a8;
+  font-weight:700;
 }
 
 button.btn.btn-cta:hover{
@@ -208,15 +197,14 @@ button.btn.btn-cta:hover{
 
 /* coluna direita — scroll interno */
 .right .card{
+  height:100%;
   display:flex;
   flex-direction:column;
-  height:100%;
 }
 
 /* planilha */
 .embed{
   flex:1;
-  min-height:240px;
   border:1px solid var(--line);
   border-radius:14px;
   overflow:auto;
@@ -230,23 +218,19 @@ button.btn.btn-cta:hover{
 
 /* regras */
 .rules{
-  margin-top:8px;
-  padding-top:8px;
+  margin-top:10px;
+  padding-top:10px;
   border-top:1px solid var(--line);
-  font-size:12px;
+  font-size:12.5px;
   color:rgba(255,255,255,.75);
 }
 
 /* =========================
-   RESPONSIVO
+   RESPONSIVO — SEM MUDANÇA
 ========================= */
-
 @media (max-width:1020px){
   .auction-layout{
     grid-template-columns:1fr;
     max-height:none;
-  }
-  .right .card{
-    height:auto;
   }
 }
