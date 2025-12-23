@@ -346,3 +346,15 @@ body{
   .embed{ height:520px; }
   .about{ grid-template-columns: 1fr; }
 }
+/* CTA mais chamativo (botão "Dê seu Lance!") */
+.btn-cta{
+  background: linear-gradient(180deg, #ff3b5c, #b0162b);
+  border-color: rgba(255,255,255,.18);
+  box-shadow:
+    0 18px 45px rgba(0,0,0,.35),
+    0 0 0 3px rgba(255,59,92,.10);
+}
+.btn-cta:hover{
+  filter:brightness(1.10);
+  transform: translateY(-1px);
+}
