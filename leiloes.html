@@ -6,53 +6,47 @@
   <title>O Código da Obra — Leilão</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="no-scroll-desktop">
+<body>
 
 <header class="site-header">
   <div class="wrap header-row">
     <div class="brand">
-      <div class="brand-icon" aria-hidden="true">🔨</div>
-      <div class="brand-text">
-        <div class="brand-title">O Código da Obra</div>
-        <div class="brand-subtitle">LEILÃO</div>
-      </div>
+      <div class="brand-title">O Código da Obra</div>
+      <div class="brand-subtitle">LEILÃO</div>
     </div>
 
-    <div class="header-actions">
-      <a class="btn btn-ghost" href="index.html">Página inicial</a>
+    <nav class="nav">
+      <a class="btn btn-ghost" href="index.html">Página Inicial</a>
       <a class="btn btn-primary" href="contato.html">Fale Conosco</a>
-    </div>
+    </nav>
   </div>
 </header>
 
-<main class="wrap page page-leilao">
-
-  <!-- Top info (encerramento / timer / termina) -->
-  <section class="topline">
-    <div class="topline-box">
+<main class="wrap page">
+  <!-- Linha de status do leilão -->
+  <section class="status-row">
+    <div class="status-box">
       <div class="mini">Encerramento (BRT)</div>
       <div class="big" id="endPretty">—</div>
     </div>
-
-    <div class="topline-box">
-      <div class="mini">Time (24 horas)</div>
+    <div class="status-box">
+      <div class="mini">Time de 24 horas</div>
       <div class="big" id="timer">—</div>
     </div>
-
-    <div class="topline-box">
-      <div class="mini">Termina</div>
+    <div class="status-box">
+      <div class="mini">Termina: Tal hora, tal dia</div>
       <div class="big" id="endsAt">—</div>
     </div>
   </section>
 
-  <section class="auction-grid">
-    <!-- Left column -->
-    <aside class="left-col">
+  <section class="auction-layout">
+    <!-- Coluna esquerda -->
+    <aside class="left">
       <div class="card pad">
-        <div class="section-title">Informações</div>
-        <a class="linkish" href="#" id="btnInfo">INFORMAÇÕES DO LEILÃO (clique)</a>
+        <div class="section-title">Informações do que será leiloado</div>
+        <a class="link" href="#" id="openInfo">INFORMAÇÕES DO LEILÃO</a>
         <div class="hint">
-          Ao clicar, aparece um pop-up com o nome do leilão e descrição.
+          Quando clicar no link, aparecerá um pop-up com: Leilão da Obra X, Descrição da Obra X e Foto.
         </div>
       </div>
 
@@ -62,79 +56,80 @@
       </div>
     </aside>
 
-    <!-- Center -->
-    <section class="center-col">
-      <a class="btn btn-frame cta" href="#formulario">Dê seu lance!<br><span>Formulário oficial</span></a>
+    <!-- Coluna central (CTA) -->
+    <section class="center">
+      <button class="btn btn-frame cta" id="openForm" type="button">
+        Dê seu Lance!
+        <span>Formulário oficial</span>
+      </button>
       <div class="hint center-hint">
-        Ao clicar, você vai direto para o formulário oficial.
+        Ao clicar, abre o formulário em pop-up e a pessoa preenche.
       </div>
     </section>
 
-    <!-- Right -->
-    <section class="right-col card pad">
-      <div class="section-title">Público</div>
-      <div class="hint">Lances visíveis (sem dados sensíveis)</div>
+    <!-- Coluna direita -->
+    <section class="right">
+      <div class="card pad">
+        <div class="section-title">Aqui a pessoa acompanha os lances enquanto rola o leilão</div>
 
-      <div class="embed-grid">
-        <div class="embed-box">
-          <div class="embed-title">Planilha pública</div>
+        <div class="embed">
           <iframe
             src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRhdVamZ8cKF_qvHD1AVskLTZuFIrbRzWPO3fnxzOHatntLh4tvJp3T5qWT_GwUw9BGaKjyiEpcPNd5/pubhtml?gid=2022177121&single=true&widget=true&headers=false"
-            title="Planilha pública"></iframe>
+            title="Planilha pública de lances"></iframe>
         </div>
 
-        <div class="embed-box" id="formulario">
-          <div class="embed-title">Dar lance (Formulário oficial)</div>
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSdc_scL91ev-gZQqq43TS44tnZT6vbp95iv_0m_3Kyduya1KA/viewform?embedded=true"
-            title="Formulário oficial"></iframe>
+        <div class="rules">
+          <div class="section-title">Regras do leilão</div>
+          <ul>
+            <li>Os lances são enviados exclusivamente via Google Forms.</li>
+            <li>A lista pública exibe apenas data/hora, nome fictício e valor.</li>
+            <li>O maior lance ao final do timer é o vencedor.</li>
+            <li>Pagamento via PIX é combinado diretamente com o artista após o encerramento.</li>
+          </ul>
         </div>
-      </div>
-
-      <div class="terms">
-        “Declaro que este lance é feito de forma consciente e responsável.
-        Caso meu lance seja o vencedor, comprometo-me a realizar o pagamento via PIX dentro do prazo combinado.
-        Entendo que essas regras existem para preservar um ambiente sério, transparente e respeitoso entre artista e colecionador.”
       </div>
     </section>
   </section>
 
-  <footer class="footer footer-compact">
-    <div class="rules">
-      <div class="section-title">Regras do leilão</div>
-      <ul>
-        <li>Os lances são enviados exclusivamente via Google Forms.</li>
-        <li>A lista pública exibe apenas data/hora, nome fictício e valor.</li>
-        <li>O maior lance ao final do timer é o vencedor.</li>
-        <li>Pagamento via PIX é combinado diretamente com o artista após o encerramento.</li>
-      </ul>
-    </div>
+  <footer class="footer">
+    <div>Leilão • O Código da Obra</div>
   </footer>
-
 </main>
 
-<!-- Pop-up -->
-<div class="modal-backdrop" id="modalInfo" aria-hidden="true">
+<!-- Modal: Informações do Leilão -->
+<div class="modal-backdrop" id="infoModal" aria-hidden="true">
   <div class="modal">
     <div class="modal-head">
       <div class="modal-title">Leilão da Obra X</div>
-      <button class="btn btn-ghost" id="closeInfo" type="button">Fechar</button>
+      <button class="btn btn-ghost" type="button" data-close="infoModal">Fechar</button>
     </div>
     <div class="modal-body">
-      <div class="desc">
-        Descrição da Obra X
-      </div>
+      <div class="desc">Descrição da Obra X</div>
       <div class="modal-photo">
         <img src="assets/img/obra-x.jpg" alt="Foto da Obra X">
       </div>
-      <div class="hint">Você pode trocar esta foto colocando sua imagem em <strong>assets/img/obra-x.jpg</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Formulário -->
+<div class="modal-backdrop" id="formModal" aria-hidden="true">
+  <div class="modal modal-wide">
+    <div class="modal-head">
+      <div class="modal-title">Formulário oficial</div>
+      <button class="btn btn-ghost" type="button" data-close="formModal">Fechar</button>
+    </div>
+    <div class="modal-body modal-body-embed">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdc_scL91ev-gZQqq43TS44tnZT6vbp95iv_0m_3Kyduya1KA/viewform?embedded=true"
+        title="Formulário oficial de lances"></iframe>
     </div>
   </div>
 </div>
 
 <script>
-  // ✅ Ajuste aqui quando você criar o leilão (fim do leilão em horário de Brasília)
-  // Exemplo: 2025-12-23T20:00:00-03:00
+  // Ajuste aqui a data/hora final do leilão (BRT -03:00)
+  // Exemplo: "2025-12-23T20:00:00-03:00"
   window.AUCTION_END = "2025-12-23T20:00:00-03:00";
 </script>
 <script src="script.js"></script>
