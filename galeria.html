@@ -1,44 +1,74 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>O Código da Obra — Galeria</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>O Código da Obra — Galeria</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="topbar">
-  <div class="wrap">
+<header class="site-header">
+  <div class="wrap header-row">
     <div class="brand">
-      <div class="logo">CO</div>
+      <div class="brand-icon" aria-hidden="true">🖼️</div>
       <div class="brand-text">
         <div class="brand-title">O Código da Obra</div>
-        <div class="brand-subtitle">Galeria • compra direta</div>
+        <div class="brand-subtitle">GALERIA DE ARTES</div>
       </div>
     </div>
 
-    <div class="toplinks">
-      <a class="link" href="index.html">← Página principal</a>
-      <a class="link" href="leiloes.html">Leilões</a>
+    <div class="header-actions">
+      <a class="btn btn-ghost" href="index.html">Página inicial</a>
+      <a class="btn btn-primary" href="contato.html">Fale Conosco</a>
     </div>
   </div>
 </header>
 
-<main class="wrap">
-  <section class="card">
-    <h1>Galeria de Obras</h1>
-    <p class="sub">Obras disponíveis para compra direta. Atendimento por WhatsApp.</p>
+<main class="wrap page">
 
-    <a class="btn bigbtn-primary" href="https://wa.me/5561981471987" target="_blank" rel="noopener">
-      Converse para comprar
-    </a>
+  <section class="grid-2">
+    <!-- Lista -->
+    <aside class="card pad">
+      <div class="section-title">Obras</div>
+      <ul class="list" id="listaObras"></ul>
+      <div class="hint">
+        Clique em uma obra para visualizar a foto e a descrição ao lado.
+      </div>
+    </aside>
+
+    <!-- Viewer -->
+    <section class="card pad">
+      <div class="viewer">
+        <div class="viewer-image">
+          <img id="obraImg" src="assets/img/obra-x.jpg" alt="Foto da obra" />
+        </div>
+
+        <div class="viewer-info">
+          <div class="section-title" id="obraNome">Obra X</div>
+          <div class="desc" id="obraDesc">Descrição da obra.</div>
+
+          <div class="ficha">
+            <div><strong>Nome:</strong> <span id="fNome">Obra X</span></div>
+            <div><strong>Número:</strong> <span id="fNumero">—</span></div>
+            <div><strong>Técnica:</strong> <span id="fTecnica">—</span></div>
+            <div><strong>Etc:</strong> <span id="fEtc">—</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hint">
+        Para adicionar mais obras, você só edita a lista no <strong>script.js</strong> (bem fácil).
+      </div>
+    </section>
   </section>
 
   <footer class="footer">
-    <div>Em breve: cards de obras (imagem, título, técnica, tamanho, valor, status).</div>
+    <div>Galeria • O Código da Obra</div>
   </footer>
+
 </main>
 
+<script src="script.js"></script>
 </body>
 </html>
