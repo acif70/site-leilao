@@ -1,180 +1,142 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>O Código da Obra — Leilão</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body class="no-scroll-desktop">
 
-<body class="no-scroll">
-
-<header class="topbar">
+<header class="site-header">
   <div class="wrap header-row">
     <div class="brand">
-      <div class="logo">CO</div>
-      <div>
+      <div class="brand-icon" aria-hidden="true">🔨</div>
+      <div class="brand-text">
         <div class="brand-title">O Código da Obra</div>
-        <div class="brand-subtitle">Leilão autoral • ambiente sério</div>
+        <div class="brand-subtitle">LEILÃO</div>
       </div>
     </div>
 
-    <nav class="toplinks">
-      <a class="link" href="index.html">Página principal</a>
-      <a class="link" href="galeria.html">Galeria</a>
-
-      <!-- BOTÃO CONTATO -->
-      <button class="btn-ghost" type="button" id="btnContato">Contato</button>
-    </nav>
+    <div class="header-actions">
+      <a class="btn btn-ghost" href="index.html">Página inicial</a>
+      <a class="btn btn-primary" href="contato.html">Fale Conosco</a>
+    </div>
   </div>
 </header>
 
-<main class="wrap main-fixed">
+<main class="wrap page page-leilao">
 
-  <!-- TOPO (texto + foto) -->
-  <section class="top-grid">
-    <div class="card card-hero">
-      <h1 class="title">Leilão da Obra X</h1>
-      <p class="subtitle">Descrição da obra X (edite este texto quando quiser).</p>
-
-      <div class="meta-row">
-        <div class="meta">
-          <div class="meta-label">Valor mínimo do lance</div>
-          <div class="meta-value">R$ 150,00</div>
-        </div>
-
-        <div class="meta">
-          <div class="meta-label">Encerramento (BRT)</div>
-          <div id="timer" class="timer-main"></div>
-        </div>
-      </div>
-
-      <div class="note">
-        Lances via formulário. A lista pública não exibe dados pessoais.
-      </div>
+  <!-- Top info (encerramento / timer / termina) -->
+  <section class="topline">
+    <div class="topline-box">
+      <div class="mini">Encerramento (BRT)</div>
+      <div class="big" id="endPretty">—</div>
     </div>
 
-    <div class="card photo-card">
-      <div class="photo-label">Foto da obra</div>
-      <div class="photo-frame">
-        <img
-          src="FOTO_OBRA_URL"
-          alt="Foto da obra do leilão"
-          onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='grid';"
-        >
-        <div id="photoFallback" class="photo-fallback">
-          (adicione uma imagem da obra)
-        </div>
-      </div>
+    <div class="topline-box">
+      <div class="mini">Time (24 horas)</div>
+      <div class="big" id="timer">—</div>
+    </div>
 
-      <div class="photo-caption">
-        Dica: use uma foto bem nítida e sem filtros pesados.
-      </div>
+    <div class="topline-box">
+      <div class="mini">Termina</div>
+      <div class="big" id="endsAt">—</div>
     </div>
   </section>
 
-  <!-- MEIO: Forms e Planilha lado a lado (MAIORES) -->
-  <section class="grid-live">
-    <div class="card live-box">
-      <div class="section-head">
-        <h2>Dar lance</h2>
-        <div class="section-sub">Formulário oficial</div>
+  <section class="auction-grid">
+    <!-- Left column -->
+    <aside class="left-col">
+      <div class="card pad">
+        <div class="section-title">Informações</div>
+        <a class="linkish" href="#" id="btnInfo">INFORMAÇÕES DO LEILÃO (clique)</a>
+        <div class="hint">
+          Ao clicar, aparece um pop-up com o nome do leilão e descrição.
+        </div>
       </div>
 
-      <div class="iframe-box">
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdc_scL91ev-gZQqq43TS44tnZT6vbp95iv_0m_3Kyduya1KA/viewform?embedded=true"
-          title="Formulário de lances"
-          loading="lazy">
-        </iframe>
+      <div class="card pad min-bid">
+        <div class="section-title">Valor mínimo do lance</div>
+        <div class="price">R$ 150,00</div>
       </div>
-    </div>
+    </aside>
 
-    <div class="card live-box">
-      <div class="section-head">
-        <h2>Público</h2>
-        <div class="section-sub">Lances visíveis (sem dados sensíveis)</div>
+    <!-- Center -->
+    <section class="center-col">
+      <a class="btn btn-frame cta" href="#formulario">Dê seu lance!<br><span>Formulário oficial</span></a>
+      <div class="hint center-hint">
+        Ao clicar, você vai direto para o formulário oficial.
+      </div>
+    </section>
+
+    <!-- Right -->
+    <section class="right-col card pad">
+      <div class="section-title">Público</div>
+      <div class="hint">Lances visíveis (sem dados sensíveis)</div>
+
+      <div class="embed-grid">
+        <div class="embed-box">
+          <div class="embed-title">Planilha pública</div>
+          <iframe
+            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRhdVamZ8cKF_qvHD1AVskLTZuFIrbRzWPO3fnxzOHatntLh4tvJp3T5qWT_GwUw9BGaKjyiEpcPNd5/pubhtml?gid=2022177121&single=true&widget=true&headers=false"
+            title="Planilha pública"></iframe>
+        </div>
+
+        <div class="embed-box" id="formulario">
+          <div class="embed-title">Dar lance (Formulário oficial)</div>
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdc_scL91ev-gZQqq43TS44tnZT6vbp95iv_0m_3Kyduya1KA/viewform?embedded=true"
+            title="Formulário oficial"></iframe>
+        </div>
       </div>
 
-      <div class="iframe-box">
-        <iframe
-          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRhdVamZ8cKF_qvHD1AVskLTZuFIrbRzWPO3fnxzOHatntLh4tvJp3T5qWT_GwUw9BGaKjyiEpcPNd5/pubhtml?widget=true&headers=false"
-          title="Lances públicos"
-          loading="lazy">
-        </iframe>
+      <div class="terms">
+        “Declaro que este lance é feito de forma consciente e responsável.
+        Caso meu lance seja o vencedor, comprometo-me a realizar o pagamento via PIX dentro do prazo combinado.
+        Entendo que essas regras existem para preservar um ambiente sério, transparente e respeitoso entre artista e colecionador.”
       </div>
-    </div>
+    </section>
   </section>
 
-</main>
-
-<!-- RODAPÉ -->
-<footer class="footer-fixed">
-  <div class="wrap footer-inner">
-    <div class="footer-block">
-      <h3 class="footer-title">Regras do leilão</h3>
-      <ul class="rules-list">
+  <footer class="footer footer-compact">
+    <div class="rules">
+      <div class="section-title">Regras do leilão</div>
+      <ul>
         <li>Os lances são enviados exclusivamente via Google Forms.</li>
         <li>A lista pública exibe apenas data/hora, nome fictício e valor.</li>
         <li>O maior lance ao final do timer é o vencedor.</li>
         <li>Pagamento via PIX é combinado diretamente com o artista após o encerramento.</li>
       </ul>
     </div>
+  </footer>
 
-    <blockquote class="quote">
-      “Declaro que este lance é feito de forma consciente e responsável.
-      Caso meu lance seja o vencedor, comprometo-me a realizar o pagamento via PIX dentro do prazo combinado.
-      Entendo que essas regras existem para preservar um ambiente sério, transparente e respeitoso entre artista e colecionador.”
-    </blockquote>
-  </div>
-</footer>
+</main>
 
-<!-- MODAL CONTATO -->
-<div class="modal-backdrop" id="contatoModal" aria-hidden="true">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="contatoTitulo">
+<!-- Pop-up -->
+<div class="modal-backdrop" id="modalInfo" aria-hidden="true">
+  <div class="modal">
     <div class="modal-head">
-      <div>
-        <div class="modal-title" id="contatoTitulo">Contato</div>
-        <div class="modal-sub">Canais oficiais do artista</div>
-      </div>
-      <button class="modal-close" type="button" id="btnFecharContato" aria-label="Fechar">✕</button>
+      <div class="modal-title">Leilão da Obra X</div>
+      <button class="btn btn-ghost" id="closeInfo" type="button">Fechar</button>
     </div>
-
     <div class="modal-body">
-      <!-- EDITE AQUI OS DADOS -->
-      <div class="contact-item">
-        <div class="contact-label">WhatsApp</div>
-        <a class="contact-link" href="https://wa.me/55DDDNUMERO" target="_blank" rel="noopener">
-          +55 (DD) 9XXXX-XXXX
-        </a>
+      <div class="desc">
+        Descrição da Obra X
       </div>
-
-      <div class="contact-item">
-        <div class="contact-label">Instagram</div>
-        <a class="contact-link" href="https://instagram.com/SEUUSUARIO" target="_blank" rel="noopener">
-          @SEUUSUARIO
-        </a>
+      <div class="modal-photo">
+        <img src="assets/img/obra-x.jpg" alt="Foto da Obra X">
       </div>
-
-      <div class="contact-item">
-        <div class="contact-label">E-mail</div>
-        <a class="contact-link" href="mailto:seuemail@exemplo.com">
-          seuemail@exemplo.com
-        </a>
-      </div>
-
-      <div class="contact-note">
-        Use apenas estes canais para dúvidas, compra direta e confirmação de pagamento.
-      </div>
+      <div class="hint">Você pode trocar esta foto colocando sua imagem em <strong>assets/img/obra-x.jpg</strong></div>
     </div>
   </div>
 </div>
 
 <script>
-  // ajuste sua data final aqui
-  const END_DATE = "2025-12-23T20:00:00-03:00";
+  // ✅ Ajuste aqui quando você criar o leilão (fim do leilão em horário de Brasília)
+  // Exemplo: 2025-12-23T20:00:00-03:00
+  window.AUCTION_END = "2025-12-23T20:00:00-03:00";
 </script>
 <script src="script.js"></script>
-
 </body>
 </html>
