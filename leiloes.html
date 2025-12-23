@@ -27,7 +27,7 @@
   <!-- Encerramento -->
   <section class="status-row one">
     <div class="status-box">
-      <div class="mini">Encerramento dos Lances (Horário de Brasília)</div>
+      <div class="mini">Encerramento dos Lances (horário de Brasília)</div>
       <div class="big">23/12/2025 • 20:00</div>
     </div>
   </section>
@@ -37,11 +37,11 @@
     <!-- Coluna esquerda -->
     <aside class="left">
       <div class="card pad">
-        <div class="section-title">Informações do que será leiloado</div>
-        <a class="link" href="#" id="openInfo">INFORMAÇÕES DO LEILÃO</a>
+        <div class="section-title">Informações sobre o leilão</div>
+        <a class="link" href="#" id="openInfo">VER DETALHES DA OBRA</a>
         <div class="hint">
-          Quando clicar no link, aparecerá um pop-up com:
-          Leilão da Obra X, Descrição da Obra X e Foto.
+          Ao clicar, será exibido um pop-up com o título do leilão,
+          a descrição da obra e a imagem correspondente.
         </div>
       </div>
 
@@ -54,21 +54,21 @@
     <!-- Coluna central -->
     <section class="center">
       <button class="btn btn-cta cta" id="openForm" type="button">
-        Dê seu Lance!
-        <span>Formulário oficial</span>
+        Dê seu lance
+        <span>Formulário oficial do leilão</span>
       </button>
 
       <div class="hint center-hint">
         Ao clicar, abrirá o formulário oficial do leilão.<br>
         Para preenchê-lo, talvez seja necessário estar logado em uma conta Gmail.<br>
-        Basta preencher os campos e enviar seu lance.
+        Basta preencher os campos solicitados e enviar seu lance.
       </div>
     </section>
 
     <!-- Coluna direita -->
     <section class="right">
       <div class="card pad">
-        <div class="section-title">Acompanhe os lances (público)</div>
+        <div class="section-title">Acompanhamento dos lances (público)</div>
 
         <div class="embed">
           <iframe
@@ -80,10 +80,10 @@
         <div class="rules">
           <div class="section-title">Regras do leilão</div>
           <ul>
-            <li>Os lances são enviados exclusivamente via Google Forms.</li>
-            <li>A lista pública exibe apenas data/hora, nome fictício e valor.</li>
-            <li>O maior lance ao final do horário é o vencedor.</li>
-            <li>Pagamento via PIX é combinado diretamente com o artista após o encerramento.</li>
+            <li>Os lances devem ser enviados exclusivamente por meio do formulário oficial.</li>
+            <li>A planilha pública exibe apenas data, horário, nome fictício e valor do lance.</li>
+            <li>O maior lance registrado até o horário de encerramento será considerado vencedor.</li>
+            <li>Após o encerramento, o pagamento via PIX é combinado diretamente com a artista.</li>
           </ul>
         </div>
       </div>
@@ -104,7 +104,11 @@
       <button class="btn btn-ghost" type="button" data-close="infoModal">Fechar</button>
     </div>
     <div class="modal-body">
-      <div class="desc">Descrição da Obra X</div>
+      <div class="desc">
+        Descrição da Obra X.
+        Este texto pode ser ajustado para apresentar técnica, ano
+        e outras informações relevantes.
+      </div>
       <div class="modal-photo">
         <img src="assets/img/obra-x.jpg" alt="Foto da Obra X">
       </div>
@@ -116,7 +120,7 @@
 <div class="modal-backdrop" id="formModal" aria-hidden="true">
   <div class="modal modal-wide">
     <div class="modal-head">
-      <div class="modal-title">Formulário oficial</div>
+      <div class="modal-title">Formulário oficial do leilão</div>
       <button class="btn btn-ghost" type="button" data-close="formModal">Fechar</button>
     </div>
     <div class="modal-body modal-body-embed">
