@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>O Código da Obra — Leilão</title>
-  <link rel="stylesheet" href="style.css?v=7" />
+  <link rel="stylesheet" href="style.css?v=8" />
 </head>
 <body>
 
@@ -32,6 +32,11 @@
 
       <!-- Você edita estes dois pontos quando criar um leilão novo -->
       <div class="big" id="endAt" data-end="2025-12-23T20:00:00-03:00">23/12/2025 • 20:00</div>
+
+      <!-- NOVO: status automático -->
+      <div class="countdown" id="statusLine">Status: <strong>—</strong></div>
+
+      <!-- contador -->
       <div class="countdown" id="countdown">Tempo restante: <strong>—</strong></div>
     </div>
   </section>
@@ -87,6 +92,7 @@
             <li>Os lances devem ser enviados exclusivamente por meio do formulário oficial.</li>
             <li>A planilha pública exibe apenas data, horário, nome fictício e valor do lance.</li>
             <li>O maior lance registrado até o horário de encerramento será considerado vencedor.</li>
+            <li>Em caso de empate, vale o primeiro envio registrado no formulário.</li>
             <li>Após o encerramento, o pagamento via PIX é combinado diretamente com a artista.</li>
           </ul>
         </div>
