@@ -23,19 +23,13 @@
 </header>
 
 <main class="wrap page">
-  <!-- Linha de status do leilão -->
-  <section class="status-row">
+
+  <!-- Encerramento (único bloco no topo) -->
+  <section class="status-row one">
     <div class="status-box">
-      <div class="mini">Encerramento (BRT)</div>
-      <div class="big" id="endPretty">—</div>
-    </div>
-    <div class="status-box">
-      <div class="mini">Time de 24 horas</div>
-      <div class="big" id="timer">—</div>
-    </div>
-    <div class="status-box">
-      <div class="mini">Termina: Tal hora, tal dia</div>
-      <div class="big" id="endsAt">—</div>
+      <div class="mini">Encerramento dos Lances (Horário de Brasília)</div>
+      <!-- Data fictícia: você edita manualmente quando for criar o leilão -->
+      <div class="big">23/12/2025 • 20:00</div>
     </div>
   </section>
 
@@ -58,19 +52,19 @@
 
     <!-- Coluna central (CTA) -->
     <section class="center">
-      <button class="btn btn-frame cta" id="openForm" type="button">
+      <button class="btn btn-cta cta" id="openForm" type="button">
         Dê seu Lance!
         <span>Formulário oficial</span>
       </button>
       <div class="hint center-hint">
-        Ao clicar, abre o formulário em pop-up e a pessoa preenche.
+        Ao Clicar, uma janela com um formulário abrirá para vc preencher e dar seu lance
       </div>
     </section>
 
     <!-- Coluna direita -->
     <section class="right">
       <div class="card pad">
-        <div class="section-title">Aqui a pessoa acompanha os lances enquanto rola o leilão</div>
+        <div class="section-title">Acompanhe os lances (público)</div>
 
         <div class="embed">
           <iframe
@@ -83,7 +77,7 @@
           <ul>
             <li>Os lances são enviados exclusivamente via Google Forms.</li>
             <li>A lista pública exibe apenas data/hora, nome fictício e valor.</li>
-            <li>O maior lance ao final do timer é o vencedor.</li>
+            <li>O maior lance ao final do horário é o vencedor.</li>
             <li>Pagamento via PIX é combinado diretamente com o artista após o encerramento.</li>
           </ul>
         </div>
@@ -127,11 +121,6 @@
   </div>
 </div>
 
-<script>
-  // Ajuste aqui a data/hora final do leilão (BRT -03:00)
-  // Exemplo: "2025-12-23T20:00:00-03:00"
-  window.AUCTION_END = "2025-12-23T20:00:00-03:00";
-</script>
 <script src="script.js"></script>
 </body>
 </html>
