@@ -57,8 +57,11 @@ body{
 
 .nav{display:flex; gap:10px; flex-wrap:wrap;}
 
-.page{padding:18px 0 26px;}
+.page{
+  padding:18px 0 26px;
+}
 
+/* cards e botões — IGUAIS AO ANTERIOR */
 .card{
   border:1px solid var(--line);
   border-radius:var(--radius);
@@ -103,54 +106,74 @@ body{
   text-align:center;
 }
 
-/* ===== LEILÃO ===== */
+/* =========================
+   LEILÃO — ORGANIZAÇÃO APENAS
+========================= */
 
+.status-row.one{
+  margin-bottom:10px;
+}
+
+.status-box{
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:12px;
+  background: rgba(255,255,255,.04);
+}
+
+.mini{
+  font-size:12px;
+  color:rgba(255,255,255,.7);
+}
+
+.big{
+  font-weight:950;
+  letter-spacing:.03em;
+}
+
+/* layout geral — MESMO GRID */
 .auction-layout{
   display:grid;
   grid-template-columns: 300px 260px 1fr;
   gap:12px;
+
+  /* 👇 ÚNICA REGRA NOVA IMPORTANTE */
+  max-height: calc(100vh - 260px);
 }
 
-.left{display:flex; flex-direction:column; gap:12px;}
-.center{text-align:center}
-.right{min-width:0}
-
-.min-bid .price{
-  font-weight:950;
-  font-size:22px;
+/* colunas */
+.left{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
 }
 
-.embed{
-  height:520px;
-  border:1px solid var(--line);
-  border-radius:14px;
-  overflow:hidden;
-}
-.embed iframe{
-  width:100%;
-  height:100%;
-  border:0;
+.center{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
 }
 
-/* ===== BOTÃO CTA – DEFINITIVO ===== */
+.right{
+  min-width:0;
+}
+
+/* CTA — IGUAL AO QUE FUNCIONOU */
 button.btn.btn-cta{
-  background-color: #b0162b;
-  color: #ffd84d;
-  border: 3px solid #ffd84d;
-
-  font-weight: 900;
-  padding: 20px 18px;
-  border-radius: 16px;
+  background-color:#b0162b;
+  color:#ffd84d;
+  border:2px solid #ffd84d;
   width:100%;
-
+  padding:18px 16px;
+  border-radius:16px;
+  font-weight:900;
   box-shadow:
-    0 12px 30px rgba(0,0,0,.45),
+    0 10px 30px rgba(0,0,0,.45),
     inset 0 0 0 2px rgba(0,0,0,.25);
-
-  text-shadow: 0 2px 6px rgba(0,0,0,.7);
-
+  text-shadow:0 1px 2px rgba(0,0,0,.8);
   appearance:none;
-  -webkit-appearance:none;
 }
 
 button.btn.btn-cta span{
@@ -162,24 +185,52 @@ button.btn.btn-cta span{
 
 button.btn.btn-cta:hover{
   background-color:#c51b33;
-  transform: translateY(-1px);
+  transform:translateY(-1px);
 }
 
-/* ===== MODAL ===== */
-.modal-backdrop{
-  position:fixed;
-  inset:0;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  background: rgba(0,0,0,.65);
-  z-index:50;
+.center-hint{
+  font-size:12.5px;
+  line-height:1.35;
+  text-align:center;
+  color:rgba(255,255,255,.7);
 }
-.modal-backdrop.show{display:flex}
 
-.modal{
-  background: var(--panel2);
-  border-radius:16px;
+/* coluna direita — scroll interno */
+.right .card{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
+
+/* planilha */
+.embed{
+  flex:1;
   border:1px solid var(--line);
-  width:min(900px, 100%);
+  border-radius:14px;
+  overflow:auto;
+}
+
+.embed iframe{
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+/* regras */
+.rules{
+  margin-top:10px;
+  padding-top:10px;
+  border-top:1px solid var(--line);
+  font-size:12.5px;
+  color:rgba(255,255,255,.75);
+}
+
+/* =========================
+   RESPONSIVO — SEM MUDANÇA
+========================= */
+@media (max-width:1020px){
+  .auction-layout{
+    grid-template-columns:1fr;
+    max-height:none;
+  }
 }
