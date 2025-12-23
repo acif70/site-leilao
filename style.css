@@ -384,3 +384,35 @@ body{
   filter: brightness(1.10) !important;
   transform: translateY(-1px);
 }
+/* ===== CTA DO LEILÃO – FORÇADO ===== */
+.btn-cta{
+  background-color: #b0162b !important; /* vermelho do site */
+  background-image: none !important;
+
+  color: #ffd84d !important; /* amarelo forte */
+  border: 2px solid #ffd84d !important;
+
+  opacity: 1 !important;
+  filter: none !important;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.45),
+    inset 0 0 0 2px rgba(0,0,0,.25);
+
+  text-shadow:
+    0 1px 2px rgba(0,0,0,.8);
+
+  font-weight: 900;
+}
+
+/* texto menor "Formulário oficial" */
+.btn-cta span{
+  color: #fff2a8 !important;
+  font-weight: 700;
+}
+
+/* hover simples, sem clarear demais */
+.btn-cta:hover{
+  background-color: #c51b33 !important;
+  transform: translateY(-1px);
+}
