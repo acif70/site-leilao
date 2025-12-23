@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>O Código da Obra — Galeria</title>
+  <title>O Código da Obra — Galeria de Artes</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,54 +11,54 @@
 <header class="site-header">
   <div class="wrap header-row">
     <div class="brand">
-      <div class="brand-icon" aria-hidden="true">🖼️</div>
-      <div class="brand-text">
-        <div class="brand-title">O Código da Obra</div>
-        <div class="brand-subtitle">GALERIA DE ARTES</div>
-      </div>
+      <div class="brand-title">O Código da Obra</div>
+      <div class="brand-subtitle">GALERIA DE ARTES</div>
     </div>
 
-    <div class="header-actions">
-      <a class="btn btn-ghost" href="index.html">Página inicial</a>
+    <nav class="nav">
+      <a class="btn btn-ghost" href="index.html">Página Inicial</a>
       <a class="btn btn-primary" href="contato.html">Fale Conosco</a>
-    </div>
+    </nav>
   </div>
 </header>
 
 <main class="wrap page">
-
   <section class="grid-2">
     <!-- Lista -->
     <aside class="card pad">
       <div class="section-title">Obras</div>
-      <ul class="list" id="listaObras"></ul>
+      <ul class="work-list" id="workList"></ul>
+
       <div class="hint">
-        Clique em uma obra para visualizar a foto e a descrição ao lado.
+        Uma lista que quando a pessoa clica no link, a foto da obra aparece ao lado com a respectiva descrição.
       </div>
     </aside>
 
-    <!-- Viewer -->
+    <!-- Visualização -->
     <section class="card pad">
-      <div class="viewer">
-        <div class="viewer-image">
-          <img id="obraImg" src="assets/img/obra-x.jpg" alt="Foto da obra" />
+      <div class="gallery-view">
+        <div class="gallery-photo">
+          <img id="workImg" src="assets/img/obra-x.jpg" alt="A foto da obra aparece aqui!" />
         </div>
 
-        <div class="viewer-info">
-          <div class="section-title" id="obraNome">Obra X</div>
-          <div class="desc" id="obraDesc">Descrição da obra.</div>
+        <div class="gallery-meta">
+          <div class="section-title" id="workTitle">Obra X</div>
 
-          <div class="ficha">
+          <div class="desc" id="workDesc">
+            Descrição da obra:
+          </div>
+
+          <div class="facts">
             <div><strong>Nome:</strong> <span id="fNome">Obra X</span></div>
             <div><strong>Número:</strong> <span id="fNumero">—</span></div>
             <div><strong>Técnica:</strong> <span id="fTecnica">—</span></div>
-            <div><strong>Etc:</strong> <span id="fEtc">—</span></div>
+            <div><strong>Etc.:</strong> <span id="fEtc">—</span></div>
           </div>
         </div>
       </div>
 
       <div class="hint">
-        Para adicionar mais obras, você só edita a lista no <strong>script.js</strong> (bem fácil).
+        Você edita/insere obras no <strong>script.js</strong> (lista OBRAS).
       </div>
     </section>
   </section>
@@ -66,7 +66,6 @@
   <footer class="footer">
     <div>Galeria • O Código da Obra</div>
   </footer>
-
 </main>
 
 <script src="script.js"></script>
