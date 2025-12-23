@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>O Código da Obra — Leilão</title>
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 <body>
 
@@ -17,6 +17,7 @@
 
     <nav class="nav">
       <a class="btn btn-ghost" href="index.html">Página Inicial</a>
+      <a class="btn btn-ghost" href="galeria.html">Galeria</a>
       <a class="btn btn-primary" href="contato.html">Fale Conosco</a>
     </nav>
   </div>
@@ -28,7 +29,10 @@
   <section class="status-row one">
     <div class="status-box">
       <div class="mini">Encerramento dos Lances (horário de Brasília)</div>
-      <div class="big">23/12/2025 • 20:00</div>
+
+      <!-- Você edita estes dois pontos quando criar um leilão novo -->
+      <div class="big" id="endAt" data-end="2025-12-23T20:00:00-03:00">23/12/2025 • 20:00</div>
+      <div class="countdown" id="countdown">Tempo restante: <strong>—</strong></div>
     </div>
   </section>
 
@@ -105,9 +109,7 @@
     </div>
     <div class="modal-body">
       <div class="desc">
-        Descrição da Obra X.
-        Este texto pode ser ajustado para apresentar técnica, ano
-        e outras informações relevantes.
+        Descrição da Obra X. (Edite este texto no arquivo leiloes.html quando for criar o leilão.)
       </div>
       <div class="modal-photo">
         <img src="assets/img/obra-x.jpg" alt="Foto da Obra X">
